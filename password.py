@@ -9,7 +9,7 @@ def load_key():
     
 key=load_key()
 cipher=Fernet(key)
-choice=input("Want to Add a New password or view the existing password(view,add): ").lower()
+choice=input("Want to Add a New password or view the existing password(view,add,Quit): ").lower()
 
 
 def add():
@@ -18,6 +18,7 @@ def add():
     encrypted=cipher.encrypt(password.encode())
     with open('password.txt','a') as f:
         f.write(username.lower() +"|"+ encrypted.decode()+ "\n")
+    print("Data is sucessfully added")
 def view():
     username=input("Enter site name or user name: ").lower()
     with open('password.txt','r') as f:
@@ -30,6 +31,8 @@ if choice=="view":
     view()
 elif choice=="add":
     add()
+elif choice=="quit":
+    print("Quit")
 else:
-    print("invalid attemp!")
+    print("invalid attempt!")
     
