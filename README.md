@@ -7,3 +7,7 @@
   <li>This library provide a key which will be store in Key.key files, this key is important to run the process of encryption and decryption .</li>
 </ul>
 
+<h2>Updated</h2>
+<h3>Added new feature of login ,without login user can't access the password manager.
+The login detail store in llogin.txt file 
+</h3>
